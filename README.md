@@ -1,4 +1,376 @@
 # mineProject
-This is my first Git repository all
+This # ResearchPilot AI
+
+> AI-powered research assistant for semantic document retrieval, citation-grounded question answering, and research paper analysis.
+
+**ResearchPilot AI** is a full-stack AI research assistant that allows users to upload research papers, organize them into collections, and ask natural-language questions about their documents.
+
+The system uses **Retrieval-Augmented Generation (RAG)** to retrieve semantically relevant document chunks before generating answers, helping keep responses grounded in the user's uploaded research materials.
+
+## 🚀 Live Demo
+
+**Live Application:** https://research-pilot-orcin.vercel.app
+
+**Repository:** https://github.com/Afiroj313501/ResearchPilot
+
+## ✨ Features
+
+* 🔐 JWT-based authentication
+* 📚 Research collection management
+* 📄 PDF document upload
+* 📝 Automatic PDF text extraction
+* ✂️ Document chunking
+* 🧠 Semantic embeddings
+* 🔎 Vector similarity search
+* 🤖 Gemini-powered question answering
+* 📌 Source-aware responses
+* 🔗 Citation/reference information
+* 💬 Research document Q&A
+* 🗄️ PostgreSQL + pgvector storage
+* ⚡ RESTful backend API
+* 🔒 Protected API routes
+
+## 🧠 RAG Pipeline
+
+```text
+PDF Upload
+    ↓
+Text Extraction
+    ↓
+Document Chunking
+    ↓
+Gemini Embeddings
+    ↓
+PostgreSQL + pgvector
+    ↓
+User Question
+    ↓
+Query Embedding
+    ↓
+Vector Similarity Search
+    ↓
+Relevant Chunks
+    ↓
+Gemini LLM
+    ↓
+Grounded Answer + Sources
+```
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* React
+* Vite
+* JavaScript/TypeScript
+* React Router
+* CSS
+
+### Backend
+
+* Node.js
+* Express.js
+* TypeScript
+* REST API
+* JWT Authentication
+
+### Database
+
+* PostgreSQL
+* pgvector
+* Prisma ORM
+* Supabase
+
+### AI
+
+* Google Gemini API
+* Gemini Embeddings
+* Retrieval-Augmented Generation (RAG)
+
+## 📂 Main Application Modules
+
+```text
+Authentication
+├── Register
+├── Login
+└── Protected Sessions
+
+Research Management
+├── Collections
+├── Documents
+└── PDF Processing
+
+AI Research
+├── Embeddings
+├── Semantic Search
+├── RAG
+└── Citation-Grounded Answers
+```
+
+## ⚙️ Environment Variables
+
+### Backend
+
+```env
+PORT=5000
+CLIENT_URL=http://localhost:5173
+
+DATABASE_URL=your_postgresql_connection_string
+
+JWT_SECRET=your_jwt_secret
+
+GEMINI_API_KEY=your_gemini_api_key
+```
+
+### Frontend
+
+Configure the backend API URL according to your deployment environment.
+
+## 🧑‍💻 Local Development
+
+### Clone
+
+```bash
+git clone https://github.com/Afiroj313501/ResearchPilot.git
+
+cd ResearchPilot
+```
+
+### Backend
+
+```bash
+cd server
+npm install
+npm run dev
+```
+
+### Frontend
+
+```bash
+cd client
+npm install
+npm run dev
+```
+
+## 🗄️ Database
+
+ResearchPilot uses PostgreSQL with `pgvector` for storing and searching document embeddings.
+
+The backend uses Prisma with the PostgreSQL adapter for database access.
+
+## 🔐 Security
+
+* JWT-based authentication
+* Protected API routes
+* Environment-based secret management
+* User-specific document access
+* Server-side AI API key protection
+
+## 🔮 Future Improvements
+
+* Multi-document conversations
+* Advanced citation visualization
+* Research paper summarization
+* Automatic literature review generation
+* PDF page-level citations
+* Research methodology extraction
+* Paper comparison
+* Export conversations
+* Research workspace collaboration
+
+## 👨‍💻 Author
+
+**Abdullah Firoj**
+
+GitHub: https://github.com/Afiroj313501
+LinkedIn: https://www.linkedin.com/in/abdullah-firoj-900697375/
+ my first Git repository all
 <br> 
 author- Abdullah Firoj
+
+# LumenLearner
+
+> AI-powered Learning Management System with course management, assessments, progress tracking, and an AI/RAG learning assistant.
+
+**LumenLearner** is a full-stack Learning Management System designed to connect students, instructors, and administrators through a centralized educational platform.
+
+The platform supports course creation, multimedia lessons, enrollment, progress tracking, quizzes, assignments, grades, and an AI-powered course assistant.
+
+## 🚀 Live Demo
+
+**Live Application:** https://lumenlearner-iota.vercel.app
+
+**Repository:** https://github.com/Afiroj313501/LumosLearn
+
+## ✨ Features
+
+### 👨‍🎓 Student
+
+* Browse courses
+* Enroll in courses
+* Watch course lessons
+* Access learning materials
+* Track course progress
+* Take quizzes
+* Submit assignments
+* View grades
+* Ask AI-powered course questions
+
+### 👨‍🏫 Instructor
+
+* Create courses
+* Manage course content
+* Upload learning materials
+* Create quizzes
+* Create assignments
+* Manage student submissions
+* Assign grades
+* Monitor student progress
+
+### 🛡️ Administrator
+
+* Manage users
+* Manage courses
+* Manage platform content
+* Monitor the learning ecosystem
+
+### 🤖 AI Learning Assistant
+
+* Course-aware Q&A
+* Retrieval-Augmented Generation
+* Context-based answers
+* Learning material retrieval
+* AI-assisted learning support
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* React
+* Vite
+* JavaScript/TypeScript
+
+### Backend
+
+* Node.js
+* Express.js
+* REST APIs
+* JWT Authentication
+
+### Database
+
+* PostgreSQL
+* Prisma ORM
+
+### AI
+
+* Google Gemini
+* Retrieval-Augmented Generation (RAG)
+
+### Learning Content
+
+* YouTube videos
+* PDF
+* PPTX
+* DOCX
+
+## 🏗️ Architecture
+
+```text
+React Frontend
+       ↓
+Express REST API
+       ↓
+Authentication Layer
+       ↓
+Business Logic
+       ↓
+PostgreSQL
+       ↓
+AI / RAG Layer
+       ↓
+Gemini
+```
+
+## 🔐 Authentication
+
+The application implements role-based authentication for:
+
+```text
+ADMIN
+INSTRUCTOR
+STUDENT
+```
+
+JWT tokens are used to protect authenticated resources.
+
+## 📚 Course System
+
+Each course can contain:
+
+* Lessons
+* Videos
+* Documents
+* Quizzes
+* Assignments
+* Grades
+* Progress information
+
+## 🤖 AI + RAG
+
+The AI assistant is designed to answer questions using course-related learning materials instead of relying solely on general model knowledge.
+
+```text
+Course Materials
+      ↓
+Document Processing
+      ↓
+Embeddings / Retrieval
+      ↓
+Relevant Context
+      ↓
+Gemini
+      ↓
+Course-Aware Answer
+```
+
+## ⚙️ Installation
+
+```bash
+git clone https://github.com/Afiroj313501/LumosLearn.git
+
+cd LumosLearn
+npm install
+```
+
+Configure your environment variables and database before starting the application.
+
+## 🔧 Environment Variables
+
+Example:
+
+```env
+DATABASE_URL=your_database_url
+JWT_SECRET=your_jwt_secret
+GEMINI_API_KEY=your_gemini_api_key
+CLIENT_URL=http://localhost:5173
+```
+
+## 🔮 Future Improvements
+
+* Live classes
+* Real-time notifications
+* Student analytics dashboard
+* AI-generated quizzes
+* Personalized learning paths
+* Course recommendation engine
+* Learning performance analytics
+* Certificate generation
+
+## 👨‍💻 Author
+
+**Abdullah Firoj**
+
+GitHub: https://github.com/Afiroj313501
+
+
