@@ -559,3 +559,104 @@ The feature set may evolve during implementation.
 
 GitHub: https://github.com/Afiroj313501
 
+# Extensive Medical Hub
+
+> A full-stack healthcare information and management platform designed to centralize medical resources and services.
+
+**Extensive Medical Hub (IMH)** is a web-based project focused on providing a centralized platform for organizing and accessing healthcare-related information.
+
+## ✨ Features
+
+* Healthcare information management
+* Medical resource organization
+* User-friendly web interface
+* Responsive design
+* Structured medical content
+* Backend API integration
+* Database-backed application architecture
+
+## 🛠️ Tech Stack
+
+* React
+* Node.js
+* Express.js
+* PostgreSQL / Database
+* REST API
+* JavaScript / TypeScript
+
+## 🏗️ Architecture
+
+```text
+React Frontend
+      ↓
+REST API
+      ↓
+Express Backend
+      ↓
+Database
+```
+
+## 📂 Project Structure
+
+```text
+IMH/
+├── client/
+├── server/
+├── README.md
+└── package.json
+```
+
+## ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Afiroj313501/IMH.git
+
+cd IMH
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Configure the required environment variables and database connection.
+
+## 🔧 Environment Variables
+
+```env
+DATABASE_URL=your_database_url
+JWT_SECRET=your_jwt_secret
+CLIENT_URL=http://localhost:5173
+```
+
+## 🚀 Development
+
+Start the development server according to the project structure.
+
+```bash
+npm run dev
+```
+
+## 🔮 Future Improvements
+
+* Doctor profiles
+* Appointment management
+* Patient dashboards
+* Medical document management
+* Search and filtering
+* Health resource recommendations
+* Secure user roles
+* AI-powered medical information assistant
+
+## ⚠️ Disclaimer
+
+This project is intended for software development and educational purposes. It should not be treated as a substitute for professional medical advice, diagnosis, or treatment.
+
+## 👨‍💻 Author
+
+**Abdullah Firoj**
+
+GitHub: https://github.com/Afiroj313501
