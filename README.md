@@ -373,4 +373,189 @@ CLIENT_URL=http://localhost:5173
 
 GitHub: https://github.com/Afiroj313501
 
+# CareerForge AI
+
+> AI-powered career development platform designed to help users build resumes, prepare for interviews, improve coding skills, and plan their careers.
+
+**CareerForge AI** is a planned AI career platform that combines multiple career-development tools into a single application.
+
+## 🎯 Vision
+
+CareerForge AI aims to provide an integrated career workspace where users can:
+
+```text
+Build Resume
+     ↓
+Analyze Resume
+     ↓
+Improve Skills
+     ↓
+Practice Interviews
+     ↓
+Practice Coding
+     ↓
+Build Portfolio
+     ↓
+Track Career Progress
+```
+
+## ✨ Planned Features
+
+### 📄 AI Resume Builder
+
+* Resume generation
+* Resume customization
+* ATS-friendly formatting
+* Multiple templates
+* Job-specific resume adaptation
+
+### 📊 ATS Resume Analyzer
+
+Analyze resumes for:
+
+* Keyword coverage
+* Skills
+* Formatting
+* Job-description alignment
+* Missing sections
+* Improvement suggestions
+
+### 🎤 AI Interview Coach
+
+* Behavioral interview practice
+* Technical questions
+* Role-specific interviews
+* AI-generated feedback
+* Answer improvement suggestions
+
+### 💻 Coding Practice
+
+* Coding problems
+* AI hints
+* Solution explanations
+* Code analysis
+* Difficulty-based practice
+
+### 🗺️ Career Roadmap
+
+Generate personalized learning roadmaps covering:
+
+* Programming
+* Web development
+* AI/ML
+* Data
+* Cybersecurity
+* Cloud
+* DevOps
+
+### 🌐 Portfolio Builder
+
+Users can generate and manage:
+
+* Portfolio websites
+* Project showcases
+* Skills sections
+* Experience sections
+* Contact information
+
+### 🐙 GitHub Analyzer
+
+Potential analysis includes:
+
+* Repository activity
+* Project quality indicators
+* Technology usage
+* Contribution patterns
+* Portfolio recommendations
+
+### 🤖 AI Career Coach
+
+A conversational AI assistant for:
+
+* Career planning
+* Skill-gap analysis
+* Learning recommendations
+* Interview preparation
+* Project recommendations
+
+## 🧠 AI Architecture
+
+```text
+User Profile
+     ↓
+Career Goals
+     ↓
+Resume / GitHub / Skills
+     ↓
+AI Analysis
+     ↓
+Career Recommendations
+     ↓
+Personalized Roadmap
+```
+
+## 🛠️ Proposed Tech Stack
+
+### Frontend
+
+* React
+* Vite
+* Tailwind CSS
+
+### Backend
+
+* Node.js
+* Express.js
+* TypeScript
+
+### Database
+
+* PostgreSQL
+* Prisma
+
+### AI
+
+* Google Gemini API
+* RAG
+* Embeddings
+
+### Integrations
+
+* GitHub API
+* Resume/PDF processing
+
+## 🔐 Security
+
+The platform should implement:
+
+* JWT authentication
+* OAuth where appropriate
+* Secure API key storage
+* User-specific data isolation
+* Protected AI endpoints
+* Secure file processing
+
+## 📌 Project Status
+
+**Planned / Development Stage**
+
+The feature set may evolve during implementation.
+
+## 🔮 Future Improvements
+
+* Job-board integration
+* Automated job matching
+* LinkedIn profile analysis
+* Application tracking
+* Skill progress tracking
+* AI-generated study plans
+* Mock technical interviews
+* Employer dashboards
+* Career analytics
+
+## 👨‍💻 Author
+
+**Abdullah Firoj**
+
+GitHub: https://github.com/Afiroj313501
 
