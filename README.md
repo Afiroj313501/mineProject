@@ -635,3 +635,197 @@ Node.js / Express
 Business Logic
     ↓
 PostgreSQL / MySQL / Supabase
+
+
+
+
+
+
+
+
+
+# 🍳 RecipeBox
+
+A modern recipe management web application where users can **discover, view, save, and manage recipes**. RecipeBox provides an easy and organized way to explore recipes, check ingredients, follow cooking instructions, and manage personal recipes.
+
+## ✨ Features
+
+* 🥗 **Browse Recipes by Category**
+
+  * Explore recipes organized into different food categories.
+
+* 🔍 **Search Recipes**
+
+  * Quickly find recipes using keywords or recipe names.
+
+* 📖 **Recipe Details**
+
+  * View complete recipe information in one place.
+
+* 🧂 **Ingredients with Quantities**
+
+  * See all required ingredients with their quantities.
+
+* 👨‍🍳 **Step-by-Step Instructions**
+
+  * Follow clear cooking instructions from preparation to serving.
+
+* ❤️ **Save / Favorite Recipes**
+
+  * Save your favorite recipes for quick access later.
+
+* ➕ **Add Custom Recipes**
+
+  * Users can create and add their own recipes.
+
+* ✏️ **Edit & Delete Recipes**
+
+  * Manage personal recipes by updating or removing them.
+
+* 🖼️ **Recipe Images**
+
+  * Display attractive images for each recipe.
+
+* ⏱️ **Preparation & Cooking Time**
+
+  * View preparation time and total cooking time.
+
+* ⭐ **Ratings & Reviews**
+
+  * Users can rate recipes and share their opinions.
+
+* 📱 **Responsive Design**
+
+  * Designed to work smoothly across desktop, tablet, and mobile devices.
+
+## 🛠️ Tech Stack
+
+> Update this section according to the technologies used in your implementation.
+
+* **Frontend:** React.js
+* **Styling:** CSS / Tailwind CSS
+* **Backend:** Node.js & Express.js
+* **Database:** PostgreSQL / MongoDB
+* **Authentication:** JWT
+* **API:** REST API
+* **Deployment:** Vercel / Render
+
+## 📂 Main Features
+
+### 🏠 Home
+
+Discover popular and recently added recipes.
+
+### 🔎 Recipe Search
+
+Search for recipes by name, ingredient, or category.
+
+### 📖 Recipe Details
+
+Each recipe contains:
+
+* Recipe name
+* Description
+* Recipe image
+* Ingredients
+* Preparation time
+* Cooking time
+* Total time
+* Step-by-step instructions
+* Category
+* Rating and reviews
+
+### ❤️ Favorites
+
+Users can save recipes they like and access them from their favorites collection.
+
+### ➕ Recipe Management
+
+Authenticated users can:
+
+* Add recipes
+* Edit recipes
+* Delete recipes
+* Manage their own recipes
+
+### ⭐ Ratings & Reviews
+
+Users can provide ratings and reviews for recipes, helping others discover recipes they enjoy.
+
+## 📸 Example Recipe
+
+### Classic Vegetable Omelette
+
+**Description:**
+A quick, healthy, and delicious omelette packed with fresh vegetables. Perfect for breakfast or a light meal.
+
+**Ingredients:**
+
+* 2 eggs
+* 1/4 cup chopped onion
+* 1/4 cup chopped tomato
+* 1/4 cup chopped bell pepper
+* 1 green chili
+* Salt to taste
+* 1/4 teaspoon black pepper
+* 1 tablespoon cooking oil
+
+**Cooking Process:**
+
+1. Crack the eggs into a bowl and whisk them well.
+2. Add salt and black pepper and mix.
+3. Heat oil in a pan over medium heat.
+4. Add onion, tomato, bell pepper, and green chili.
+5. Sauté the vegetables for 2–3 minutes.
+6. Pour the beaten eggs over the vegetables.
+7. Cook until the bottom becomes firm.
+8. Carefully fold the omelette in half.
+9. Cook for another 1–2 minutes.
+10. Serve hot.
+
+## 🎯 Project Goals
+
+RecipeBox aims to provide a simple and user-friendly platform for:
+
+* Discovering new recipes
+* Organizing recipes
+* Managing personal recipes
+* Saving favorite meals
+* Sharing cooking ideas
+* Making cooking instructions easier to follow
+
+## 🚀 Future Improvements
+
+* 🤖 AI-powered recipe recommendations
+* 🥕 Search recipes by available ingredients
+* 🧠 AI recipe generation
+* 📋 Weekly meal planner
+* 🛒 Automatic shopping-list generation
+* 🌎 Multi-language recipe support
+* 📊 Nutrition information
+* 🔔 Cooking reminders
+* 👥 User profiles and social features
+* 📤 Recipe sharing
+
+## 📱 Responsive Design
+
+RecipeBox is designed with a responsive interface so users can access recipes comfortably on:
+
+* 💻 Desktop
+* 💻 Laptop
+* 📱 Mobile
+* 📟 Tablet
+
+## 👨‍💻 Author
+
+**Abdullah Firoj**
+
+CSE Graduate | Full Stack Developer | AI/ML Enthusiast
+
+* GitHub: [Afiroj313501](https://github.com/Afiroj313501)
+* LinkedIn: [Abdullah Firoj](https://www.linkedin.com/in/abdullah-firoj-900697375/)
+
+---
+
+⭐ **If you find RecipeBox useful, consider giving the repository a star!**
+
