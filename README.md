@@ -829,3 +829,86 @@ CSE Graduate | Full Stack Developer | AI/ML Enthusiast
 
 ⭐ **If you find RecipeBox useful, consider giving the repository a star!**
 
+💰 SpendWise
+
+SpendWise is a personal finance and money-tracking application designed to help users manage their daily expenses, track income, and understand their spending habits.
+
+✨ Features
+
+- 💸 Track daily expenses
+- 💰 Record income and earnings
+- 📊 Monitor spending and financial activity
+- 🗂️ Categorize transactions
+- 📅 View transaction history
+- 📈 Analyze spending patterns
+- 🧮 Track balance and overall financial status
+- 🔐 Secure and user-friendly interface
+
+🛠️ Tech Stack
+
+- Frontend: [Add your frontend technology]
+- Backend: [Add your backend technology]
+- Database: [Add your database]
+- Authentication: [Add if applicable]
+
+🚀 Getting Started
+
+Prerequisites
+
+Make sure you have the required development environment installed.
+
+git clone <your-repository-url>
+cd SpendWise
+
+Install the dependencies:
+
+npm install
+
+Start the development server:
+
+npm run dev
+
+📱 How It Works
+
+1. Create an account or log in.
+2. Add your income and expenses.
+3. Assign transactions to categories.
+4. View your transaction history.
+5. Monitor your balance and spending patterns.
+6. Use the insights to manage your money more effectively.
+
+📂 Project Structure
+
+SpendWise/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── services/
+│   ├── assets/
+│   └── ...
+├── public/
+├── package.json
+└── README.md
+
+🎯 Purpose
+
+The goal of SpendWise is to make personal money management simple, organized, and accessible. Instead of manually keeping track of expenses, users can manage their financial activities in one place.
+
+🔮 Future Improvements
+
+- Budget planning
+- Monthly financial reports
+- Advanced spending analytics
+- Expense reminders
+- Export transactions as PDF/CSV
+- Recurring expenses
+- Dark mode
+- Mobile application
+
+👨‍💻 Author
+
+Abdullah Firoj
+
+---
+
+⭐ If you find SpendWise useful, consider giving the project a star!
