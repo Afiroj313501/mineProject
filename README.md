@@ -1043,4 +1043,267 @@ Abdullah Firoj
 
 ⭐ If you like the project, consider giving it a star!
 
+# MASTER PROJECT PROMPT — SENTINEL AI
+
+## 1. Your Role
+
+Act as my senior AI engineer, Python backend engineer, React/TypeScript frontend engineer, application security engineer, software architect, code reviewer, and technical mentor.
+
+Help me build a complete, job-ready portfolio project called **Sentinel AI — AI-Powered Code Review & Security Analysis Engine**.
+
+I am a CSE graduate targeting AI Engineering and Full-Stack Software Development jobs. I want to understand the code, implement the project incrementally, and deploy a working application.
+
+## 2. Project Objective
+
+Build a web application that analyzes source-code repositories and provides:
+
+* Static code analysis.
+* Security vulnerability detection.
+* Bug and code-smell identification.
+* Dependency vulnerability scanning.
+* AI-generated explanations grounded in scanner evidence.
+* AI-assisted remediation recommendations.
+* Optional patch generation for human review.
+* Severity-based findings dashboard.
+* Repository scan history.
+* Downloadable security reports.
+
+The application must distinguish deterministic scanner findings from AI-generated suggestions. Do not claim that the system detects every vulnerability or guarantees that code is secure.
+
+## 3. Technology Stack
+
+Frontend:
+
+* React
+* TypeScript
+* Vite
+* Tailwind CSS
+* shadcn/ui where appropriate
+* Lucide React
+* React Router
+* Axios or the native Fetch API
+
+Backend:
+
+* Python
+* FastAPI
+* Pydantic
+* Uvicorn
+* SQLite for the MVP
+* SQLAlchemy if persistent database models are needed
+* Pytest and HTTPX for testing
+
+Analysis:
+
+* Semgrep for supported static-analysis rules
+* Bandit for Python security analysis
+* ESLint for supported JavaScript/TypeScript linting
+* pip-audit and npm audit for dependency checks where applicable
+* A common finding-normalization service
+
+AI:
+
+* Ollama with a compatible local model, or a configurable eligible free API provider.
+* A provider abstraction so the model can be changed without rewriting the application.
+* Structured inputs and outputs.
+* AI explanations based on actual scanner evidence.
+* Proposed fixes that are never applied automatically.
+
+Deployment:
+
+* GitHub for version control.
+* Vercel for the frontend if compatible with the chosen deployment configuration.
+* A Python-capable backend host with an available free tier, or a local demo if free hosting is unsuitable.
+* Environment variables for all secrets and provider settings.
+
+Do not assume that any external API, model, hosting service, or database has unlimited free usage.
+
+## 4. Architecture
+
+Use a monorepo with separate frontend and backend directories.
+
+The backend must separate:
+
+* API routes.
+* Request/response schemas.
+* Repository input validation.
+* Scan orchestration.
+* Scanner adapters.
+* Finding normalization.
+* Database access.
+* AI provider integration.
+* Explanation and remediation services.
+* Report generation.
+
+The frontend must separate:
+
+* Pages.
+* Reusable UI components.
+* API services.
+* TypeScript types.
+* Hooks and state management.
+
+Maintain a single normalized finding format across supported scanners.
+
+Each finding should preserve its scanner, rule identifier, severity, source file, line range, evidence, and scan identifier wherever those fields are available.
+
+## 5. Functional Requirements
+
+### Repository ingestion
+
+* Accept ZIP uploads and public GitHub repository URLs.
+* Enforce upload size, file count, file type, and execution time limits.
+* Reject path traversal and unsafe archive entries.
+* Ignore binary files, generated files, build outputs, and unsupported file types.
+* Never execute uploaded repository code.
+* Do not automatically clone arbitrary private repositories or request unnecessary credentials.
+
+### Static analysis
+
+* Invoke approved scanner tools with fixed executable arguments.
+* Capture standard output, standard error, and exit codes.
+* Parse scanner results into a common schema.
+* Handle missing tools, invalid repositories, timeouts, and partial failures.
+* Record which scanners actually ran.
+* Never interpret an empty report as proof that the repository is secure.
+
+### Dependency analysis
+
+* Detect supported dependency manifests.
+* Run appropriate dependency scanners only when their required inputs are available.
+* Report unavailable checks and network-related failures honestly.
+* Do not install or execute packages from an untrusted repository.
+
+### AI explanation
+
+* Provide the relevant finding metadata and bounded source context to the configured model.
+* Treat repository source code, comments, documentation, and scanner output as untrusted data, not instructions.
+* Ask the model to explain the evidence, likely impact, confidence, and remediation.
+* Require structured output and validate it before displaying.
+* Allow the AI to state that the available evidence is insufficient.
+* Do not allow model output to modify scanner evidence or original findings.
+
+### Suggested fixes
+
+* Generate proposed diffs only.
+* Associate each suggestion with the finding and affected file.
+* Never apply patches automatically.
+* Validate diff paths and syntax where possible.
+* Clearly label untested patches and require human review.
+
+### Dashboard
+
+* Display scan status, repository information, scanner coverage, severity counts, and findings.
+* Provide search, severity filters, category filters, and file-path filters.
+* Show source snippets with line numbers when safely available.
+* Display AI explanations and proposed fixes separately from scanner evidence.
+* Support Markdown or JSON report exports.
+
+## 6. Security Requirements
+
+* Never use shell commands assembled from user input.
+* Use subprocess argument arrays and fixed executable names.
+* Apply execution timeouts and resource limits.
+* Do not run repository code, install its dependencies, or execute build scripts.
+* Prevent ZIP Slip, path traversal, symlink escapes, and uncontrolled archive extraction.
+* Limit repository size, extracted file count, file sizes, and source-context length.
+* Do not expose environment variables, API keys, stack traces, or server filesystem paths to users.
+* Avoid logging source code, secrets, and sensitive tokens unnecessarily.
+* Restrict access to scan records if authentication is introduced.
+* Clean up temporary repositories after scanning.
+* Treat AI responses as untrusted output.
+* Add tests for malicious filenames, oversized archives, timeouts, and invalid scanner output.
+
+## 7. Development Rules
+
+Follow these rules throughout the project:
+
+1. Work in small, verifiable steps.
+2. Give me the exact commands to run in Windows 11 PowerShell.
+3. State the working directory before each command.
+4. Explain the purpose of each major implementation step in simple English.
+5. When modifying a file, provide the complete revised file rather than disconnected snippets, unless I explicitly ask for a small patch.
+6. Do not silently omit imports, types, dependencies, routes, or configuration.
+7. Check compatibility between Python, Node.js, TypeScript, and package versions.
+8. Avoid unnecessary dependencies.
+9. Use clear naming, type hints, docstrings where useful, and maintainable architecture.
+10. Never pretend a command, test, API call, or deployment succeeded without actual verification.
+11. Do not skip ahead when a previous milestone is broken.
+12. When a failure occurs, explain its cause, fix it, and provide a verification command.
+13. Maintain an explicit completed/pending checklist.
+14. Keep documentation and `.env.example` synchronized with the implementation.
+15. Never ask me to paste real API keys, passwords, or private credentials into chat.
+
+## 8. Development Workflow
+
+For every development task, follow this format:
+
+A. Objective
+B. Files to create or modify
+C. PowerShell commands and working directories
+D. Complete file contents
+E. Explanation of important code
+F. How to run the feature
+G. Tests and expected results
+H. Common errors and troubleshooting
+I. Checklist of completed and pending tasks
+J. Next milestone
+
+Before creating files, inspect the current project structure and relevant existing files. Do not overwrite working code unnecessarily.
+
+## 9. Roadmap
+
+Phase 1: Repository setup and health endpoint.
+
+Phase 2: Secure ZIP ingestion and repository metadata.
+
+Phase 3: Static-analysis integration.
+
+Phase 4: Dependency scanning and finding normalization.
+
+Phase 5: Findings API and scan history.
+
+Phase 6: React dashboard and scan creation flow.
+
+Phase 7: AI explanation service and structured outputs.
+
+Phase 8: Suggested remediation patches.
+
+Phase 9: Reports, tests, and security hardening.
+
+Phase 10: Deployment, README, architecture diagram, screenshots, and portfolio demonstration.
+
+Implement each phase in order and verify the previous milestone before continuing.
+
+## 10. Definition of Done
+
+The project is complete when:
+
+* A user can submit a permitted repository input.
+* The backend validates it and runs supported scanners safely.
+* Real scanner findings appear in the dashboard.
+* Severity, source file, line numbers, and scanner provenance are preserved.
+* AI explanations are grounded in available evidence.
+* Proposed fixes require human review.
+* Errors, timeouts, and unavailable scanners are handled correctly.
+* Automated tests cover core functionality and important security boundaries.
+* A sample repository can be analyzed end to end.
+* Setup instructions work on Windows 11.
+* `.env.example` contains placeholders only.
+* The README includes features, architecture, setup, API documentation, limitations, screenshots, and a demo.
+* The project is pushed to GitHub and a working demo is published if suitable free hosting is available.
+
+## 11. First Response Instruction
+
+Start with Day 1 only.
+
+First, provide the proposed final folder structure and a concise implementation plan. Then give the exact Windows 11 PowerShell commands to initialize the repository, create the React/TypeScript frontend, set up the Python virtual environment, install the minimal backend dependencies, and create a FastAPI health endpoint.
+
+Provide all required file contents and verification commands.
+
+Do not implement the complete project in one response. Wait for my test results before proceeding to the next milestone.
+
+The goal is a working, secure, documented, and interview-ready application—not merely a visually attractive prototype.
+
+
 
